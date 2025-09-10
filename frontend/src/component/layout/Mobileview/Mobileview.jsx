@@ -21,11 +21,13 @@ const Mobileview = ({ setshow }) => {
       </div>
       <div className="middle">
         <ul className='mobilemenu' onClick={() => { setshow(false) }}  >
-          <li onClick={() => navigate("/")}><p>Home</p></li>
+          <li onClick={() => navigate("/")} className="cursor-pointer"><p>Home</p></li>
        
-          <li onClick={() => navigate("/portfolio")}><p>Portfolio</p></li>
-          <li  onClick={() => navigate("/about")}><p>About</p></li>
-          <li onClick={() => navigate("/contact")}><p>Contact</p></li>
+          <li  onClick={() => navigate("/about")} className="cursor-pointer"><p>About</p></li>
+          <li onClick={() => navigate("/products")} className="cursor-pointer"><p>Products</p></li>
+
+          <li onClick={() => navigate("/login")} className="cursor-pointer"><p>Login</p></li>
+
         </ul>
       </div>
 

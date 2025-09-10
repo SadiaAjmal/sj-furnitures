@@ -1,26 +1,35 @@
-import React , {useEffect} from 'react'
-import MainProduct from '../Product/MainProduct'
-import LoginSignUp from "../LoginSignup/LoginSignup"
-import Hero from '../layout/hero/Hero'
-import {getProduct} from "../../actions/productAction";
+import React from "react";
+import Testimonial from "./Testimonial";
+import SocialGallery from "./SocialGallery";
+import Hero from "./Hero"
+import Category from "./Category";
+import PromoBannerGrid from "./PromoBannerGrid";
+import Feature from "./Feature";
+import MainProduct from "../Product/MainProduct";
+import { Helmet } from "react-helmet";
 
 
+const Home = () => {
+  return (
+    <>
 
-const Home = () => {  
 
+      <Helmet>
+        <title>SJ Furnitures | Home</title>
+        <meta name="description" content="Welcome to My React App! Explore amazing features and content." />
+      </Helmet>
 
-
-  return (  
-    <>  
-  
-     <div className='md:px-20 px-3 mt-20'>
-      <MainProduct/>
-    </div>
-  
-
-    </>
+      <Hero />
+      <Category />
+      <Feature />
    
-  )
-}
+      <PromoBannerGrid />
+      {/* <FlashSale/> */}
+         <MainProduct/>
+      <Testimonial />
+      <SocialGallery />
+    </>
+  );
+};
 
-export default Home
+export default Home;
